@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="68452" started-at="2017-08-28T09:20:44Z" finished-at="2017-08-28T09:21:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="68452" started-at="2017-08-28T09:20:44Z" finished-at="2017-08-28T09:21:52Z">
+      <class name="automationFramework.TestCases">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationFramework.TestCases@731a74c]" name="beforeTest" is-config="true" duration-ms="5900" started-at="2017-08-28T14:50:38Z" finished-at="2017-08-28T14:50:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="InvalidUsername()[pri:0, instance:automationFramework.TestCases@731a74c]" name="InvalidUsername" duration-ms="23089" started-at="2017-08-28T14:50:44Z" finished-at="2017-08-28T14:51:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUsername -->
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@731a74c]" name="AssertResult" is-config="true" duration-ms="0" started-at="2017-08-28T14:50:44Z" finished-at="2017-08-28T14:50:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@731a74c]" name="AssertResult" is-config="true" duration-ms="0" started-at="2017-08-28T14:51:07Z" finished-at="2017-08-28T14:51:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="FAIL" signature="InvalidPassword()[pri:1, instance:automationFramework.TestCases@731a74c]" name="InvalidPassword" duration-ms="11082" started-at="2017-08-28T14:51:07Z" finished-at="2017-08-28T14:51:18Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: html/body/div[2]/div/div/div[2]/ul/li[2]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ASI-INA551W6WP', ip: '10.188.11.25', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_141'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\dkeshav\AppData\Local\Temp\rust_mozprofile.dema6oqYJg8v, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=6.1, moz:processID=5124.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 2f36393d-dd35-45e8-b390-e059684c88b3
+*** Element info: {Using=xpath, value=html/body/div[2]/div/div/div[2]/ul/li[2]/a}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: html/body/div[2]/div/div/div[2]/ul/li[2]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ASI-INA551W6WP', ip: '10.188.11.25', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_141'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\dkeshav\AppData\Local\Temp\rust_mozprofile.dema6oqYJg8v, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=6.1, moz:processID=5124.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 2f36393d-dd35-45e8-b390-e059684c88b3
+*** Element info: {Using=xpath, value=html/body/div[2]/div/div/div[2]/ul/li[2]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.Home_Page.lnk_MyAccount(Home_Page.java:13)
+	at automationFramework.TestCases.InvalidPassword(TestCases.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPassword -->
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@731a74c]" name="AssertResult" is-config="true" duration-ms="0" started-at="2017-08-28T14:51:18Z" finished-at="2017-08-28T14:51:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="InvalidUserPass()[pri:2, instance:automationFramework.TestCases@731a74c]" name="InvalidUserPass" duration-ms="16143" started-at="2017-08-28T14:51:18Z" finished-at="2017-08-28T14:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUserPass -->
+        <test-method status="PASS" signature="ValidCredential()[pri:3, instance:automationFramework.TestCases@731a74c]" name="ValidCredential" duration-ms="17562" started-at="2017-08-28T14:51:34Z" finished-at="2017-08-28T14:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidCredential -->
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@731a74c]" name="AssertResult" is-config="true" duration-ms="0" started-at="2017-08-28T14:51:34Z" finished-at="2017-08-28T14:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:automationFramework.TestCases@731a74c]" name="afterClass" is-config="true" duration-ms="554" started-at="2017-08-28T14:51:52Z" finished-at="2017-08-28T14:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- automationFramework.TestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

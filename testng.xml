@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="travelsautomation" >
+	<test name="Test">
+		<!--  <parameter name="browser" value="firefox" />-->
+		<classes>
+			<class name="automationFramework.TestCases">
+				<methods>
+					<include name="beforeTest" />
+					<include name="launchapp" />
+					<include name="AssertResult" />
+					<include name="InvalidUsername" />
+					<include name="InvalidPassword" />
+					<include name="InvalidUserPass" />
+					<include name="ValidCredential" />
+					<include name="afterClass" />
+				</methods>
+			</class>
+		</classes>
+	</test><!-- Test -->
+
+</suite> <!-- Suite -->
