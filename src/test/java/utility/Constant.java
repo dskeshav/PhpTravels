@@ -4,9 +4,9 @@ public class Constant {
 
 	public static final String URL = "http://www.phptravels.net/";
 
-	// public static final String Username = "user@phptravels.com";
+	 public static final String Username = "user@phptravels.com";
 
-	// public static final String Password = "demouser";
+	 public static final String Password = "demouser";
 
 	public static final String Path_TestData = "C:\\Users\\dkeshav\\workspace\\selenium\\PhpTravels1\\src\\test\\resource\\TestData\\";
 

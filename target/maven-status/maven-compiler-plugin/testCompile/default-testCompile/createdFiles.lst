@@ -1,6 +1,0 @@
-appModules\SignIn_Action.class
-pageObjects\Home_Page.class
-utility\ExcelUtils.class
-utility\Constant.class
-pageObjects\Login_Page.class
-automationFramework\TestCases.class

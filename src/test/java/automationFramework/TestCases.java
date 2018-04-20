@@ -1,7 +1,6 @@
 package automationFramework;
 
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +22,9 @@ public class TestCases {
 	public int User_cell_num;
 	public int Password_cell_num;
 	public int MessageDisplay_cell_num;
+	public int Result_cell_num;
 	static String result;
+	
 	int index_var = 0;
 
 	public static Logger log = Logger.getLogger(TestCases.class.getName());
@@ -33,7 +34,7 @@ public class TestCases {
 		System.setProperty("webdriver.gecko.driver", "C:/Users/dkeshav/workspace/selenium/drivers/geckodriver.exe");
 		driver = new FirefoxDriver();
 		log.info("Current browser is" + driver.getClass());
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		try {// Load excel file
 			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Sheet1");
 		} catch (Exception e) {
@@ -43,64 +44,73 @@ public class TestCases {
 		User_cell_num = ExcelUtils.getCellNum("sheet1", "Username");
 		Password_cell_num = ExcelUtils.getCellNum("sheet1", "Password");
 		MessageDisplay_cell_num = ExcelUtils.getCellNum("sheet1", "Message Displayed");
+		Result_cell_num=ExcelUtils.getCellNum("sheet1", "Result");
 	}
 
 	@Test(priority = 0)
 	public void InvalidUsername() throws Exception {
 		// Launch website
 		driver.get(Constant.URL);
+		Home_Page hp = new Home_Page();
+		hp.lnk_MyAccount(driver).click();
+		
+		hp.lnk_Login(driver).click();
 
-		Home_Page.lnk_MyAccount(driver).click();
-		Thread.sleep(2000);
-
-		Home_Page.lnk_Login(driver).click();
-
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
+
 		log.info("username :" + username);
-		Login_Page.txtbx_UserName(driver).sendKeys(username);
+		Login_Page lp = new Login_Page();
+		lp.txtbx_UserName(driver).sendKeys(username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
 		log.info("password :" + password);
-		Login_Page.txtbx_Password(driver).sendKeys(password);
+		lp.txtbx_Password(driver).sendKeys(password);
 
-		Thread.sleep(2000);
+		// Thread.sleep(2000);
 
-		Login_Page.btn_LogIn(driver).click();
-		System.out.println("Login is pressed: " + Login_Page.btn_LogIn(driver).isSelected());
-		Thread.sleep(2000);
+		lp.btn_LogIn(driver).click();
+		
 
-		result = driver.findElement(By.xpath("//*[@id='loginfrm']/div[1]/div")).getText();
-		log.info("result :" + result);
+		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
+		
+		Assert.assertEquals(result, "Invalid Email or Password");
+		
 		// set excel cell
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
-		// ExcelUtils.Cell = ExcelUtils.Row.getCell(MessageDisplay_cell_num);
-		// ExcelUtils.Cell.setCellValue(result);
-		Assert.assertEquals(result, "Invalid Email or Password");
+		ExcelUtils.Cell = ExcelUtils.Row.getCell(MessageDisplay_cell_num);
+		ExcelUtils.Cell.setCellValue(result);
+		
+		if(result=="Invalid Email or Password"){
+			ExcelUtils.setCellData("Pass", index_var, Result_cell_num);
+			ExcelUtils.Cell = ExcelUtils.Row.getCell(Result_cell_num);
+			ExcelUtils.Cell.setCellValue("Pass");
+		}
 	}
 
 	@Test(priority = 1)
 	public void InvalidPassword() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page.lnk_MyAccount(driver).click();
-		Thread.sleep(4000);
+		Home_Page hp = new Home_Page();
 
-		Home_Page.lnk_Login(driver).click();
+		hp.lnk_MyAccount(driver).click();
+
+		Thread.sleep(2000);
+		hp.lnk_Login(driver).click();
 
 		Thread.sleep(4000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		Login_Page.txtbx_UserName(driver).sendKeys(username);
+		Login_Page lp = new Login_Page();
+		lp.txtbx_UserName(driver).sendKeys(username);
+		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		Login_Page.txtbx_Password(driver).sendKeys(password);
-		// Login_Page.txtbx_UserName(driver).sendKeys("user@phptravels.com");
-		// Login_Page.txtbx_Password(driver).sendKeys(" ");
+		lp.txtbx_Password(driver).sendKeys(password);
+
+		lp.btn_LogIn(driver).click();
 		Thread.sleep(2000);
 
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(2000);
-
-		result = driver.findElement(By.xpath("//*[@id='loginfrm']/div[1]/div")).getText();
+		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
 
 		System.out.println(result);
 
@@ -112,25 +122,24 @@ public class TestCases {
 	@Test(priority = 2)
 	public void InvalidUserPass() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page.lnk_MyAccount(driver).click();
-		Thread.sleep(4000);
+		Home_Page hp = new Home_Page();
 
-		Home_Page.lnk_Login(driver).click();
+		hp.lnk_MyAccount(driver).click();
+		hp.lnk_Login(driver).click();
 
-		Thread.sleep(4000);
+		Thread.sleep(2000);
+		Login_Page lp = new Login_Page();
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		Login_Page.txtbx_UserName(driver).sendKeys(username);
+		lp.txtbx_UserName(driver).sendKeys(username);
+		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		Login_Page.txtbx_Password(driver).sendKeys(password);
-		// Login_Page.txtbx_UserName(driver).sendKeys(" ");
-		// Login_Page.txtbx_Password(driver).sendKeys(" ");
+		lp.txtbx_Password(driver).sendKeys(password);
+
+		lp.btn_LogIn(driver).click();
 		Thread.sleep(2000);
 
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(2000);
-
-		result = driver.findElement(By.xpath("//*[@id='loginfrm']/div[1]/div")).getText();
+		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
 		System.out.println(result);
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
@@ -141,32 +150,44 @@ public class TestCases {
 	@Test(priority = 3)
 	public void ValidCredential() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page.lnk_MyAccount(driver).click();
-		Thread.sleep(4000);
+		Home_Page hp = new Home_Page();
+		hp.lnk_MyAccount(driver).click();
 
-		Home_Page.lnk_Login(driver).click();
+		Thread.sleep(2000);
+		hp.lnk_Login(driver).click();
 
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		Login_Page.txtbx_UserName(driver).sendKeys(username);
+		Login_Page lp = new Login_Page();
+		lp.txtbx_UserName(driver).sendKeys(username);
+		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		Login_Page.txtbx_Password(driver).sendKeys(password);
-		// Login_Page.txtbx_UserName(driver).sendKeys("user@phptravels.com");
-		// Login_Page.txtbx_Password(driver).sendKeys("demouser");
+		lp.txtbx_Password(driver).sendKeys(password);
+
 		Thread.sleep(2000);
 
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(3000);
+		lp.btn_LogIn(driver).click();
+		Thread.sleep(5000);
 
-		result = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[1]/h3")).getText();
+		result =
+		driver.findElement(By.xpath("//h3[@class='RTL']")).getText();
 		System.out.println(result);
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
 
-		Assert.assertEquals(result, "Hi, John Smith");
-
+		Assert.assertEquals(result, "Hi, DVhbCERv IlqEZZxz");
+		Thread.sleep(6000);
+//		driver.findElement(By.xpath(
+//				"//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']/ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]/li[@class='open']/a[contains(@href,'javascript:void(0);')]")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//html//li[@class='open']//li[2]/a[1]")).click();
 	}
+
+	// @Test(priority = 4)
+	// public void logout() {
+	// driver.
+	// }
 
 	@BeforeMethod
 	public void AssertResult() {
@@ -181,7 +202,6 @@ public class TestCases {
 	public void afterClass() {
 		driver.quit();
 	}
-
 }
 
 // @Parameters({ "browser" })

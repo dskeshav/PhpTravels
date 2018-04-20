@@ -20,26 +20,22 @@ public class SignIn_Action {
 		// num &amp; Col num)to getCellData method
 
 		String sUserName = ExcelUtils.getCellDataasString(1, 1);
-
 		String sPassword = ExcelUtils.getCellDataasString(1, 2);
+		
 		System.out.println("username:" + sUserName);
 		System.out.println("pasword:" + sPassword);
-		Thread.sleep(4000);
-		Home_Page.lnk_MyAccount(driver).click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
+		Home_Page hp = new Home_Page();
+		hp.lnk_MyAccount(driver).click();
 
-		Home_Page.lnk_Login(driver).click();
-
-		Thread.sleep(4000);
-		// driver.navigate().forward();
-
-		Login_Page.txtbx_UserName(driver).sendKeys(sUserName);
-
-		Login_Page.txtbx_Password(driver).sendKeys(sPassword);
-		Thread.sleep(6000);
-		Login_Page.btn_LogIn(driver).click();
+		hp.lnk_Login(driver).click();
 		
-
+		Login_Page lp = new Login_Page();
+		lp.txtbx_UserName(driver).sendKeys(sUserName);
+		lp.txtbx_Password(driver).sendKeys(sPassword);
+		
+		lp.btn_LogIn(driver).click();
+		Thread.sleep(6000);
 	}
 
 }
