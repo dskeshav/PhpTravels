@@ -24,7 +24,7 @@ public class TestCases {
 	public int MessageDisplay_cell_num;
 	public int Result_cell_num;
 	static String result;
-	
+
 	int index_var = 0;
 
 	public static Logger log = Logger.getLogger(TestCases.class.getName());
@@ -44,7 +44,7 @@ public class TestCases {
 		User_cell_num = ExcelUtils.getCellNum("sheet1", "Username");
 		Password_cell_num = ExcelUtils.getCellNum("sheet1", "Password");
 		MessageDisplay_cell_num = ExcelUtils.getCellNum("sheet1", "Message Displayed");
-		Result_cell_num=ExcelUtils.getCellNum("sheet1", "Result");
+		Result_cell_num = ExcelUtils.getCellNum("sheet1", "Result");
 	}
 
 	@Test(priority = 0)
@@ -53,7 +53,7 @@ public class TestCases {
 		driver.get(Constant.URL);
 		Home_Page hp = new Home_Page();
 		hp.lnk_MyAccount(driver).click();
-		
+
 		hp.lnk_Login(driver).click();
 
 		Thread.sleep(4000);
@@ -70,18 +70,17 @@ public class TestCases {
 		// Thread.sleep(2000);
 
 		lp.btn_LogIn(driver).click();
-		
 
 		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
-		
+
 		Assert.assertEquals(result, "Invalid Email or Password");
-		
+
 		// set excel cell
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
 		ExcelUtils.Cell = ExcelUtils.Row.getCell(MessageDisplay_cell_num);
 		ExcelUtils.Cell.setCellValue(result);
-		
-		if(result=="Invalid Email or Password"){
+
+		if (result == "Invalid Email or Password") {
 			ExcelUtils.setCellData("Pass", index_var, Result_cell_num);
 			ExcelUtils.Cell = ExcelUtils.Row.getCell(Result_cell_num);
 			ExcelUtils.Cell.setCellValue("Pass");
@@ -170,24 +169,48 @@ public class TestCases {
 		lp.btn_LogIn(driver).click();
 		Thread.sleep(5000);
 
-		result =
-		driver.findElement(By.xpath("//h3[@class='RTL']")).getText();
+		result = driver.findElement(By.xpath("//h3[@class='RTL']")).getText();
 		System.out.println(result);
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
 
 		Assert.assertEquals(result, "Hi, DVhbCERv IlqEZZxz");
 		Thread.sleep(6000);
-//		driver.findElement(By.xpath(
-//				"//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']/ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]/li[@class='open']/a[contains(@href,'javascript:void(0);')]")).click();
+//		driver.findElement(By
+//				.xpath("//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']//ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]//li[@class='open']/a[contains(@href,'javascript:void(0);')]"))
+//				.click();
 //		Thread.sleep(2000);
 //		driver.findElement(By.xpath("//html//li[@class='open']//li[2]/a[1]")).click();
+
+
 	}
 
-	// @Test(priority = 4)
-	// public void logout() {
-	// driver.
-	// }
+//	@Test(priority = 4)
+//	public void logout() throws InterruptedException {
+//		driver.get(Constant.URL);
+//		Home_Page hp = new Home_Page();
+//
+//		hp.lnk_MyAccount(driver).click();
+//		hp.lnk_Login(driver).click();
+//
+//		Login_Page lp = new Login_Page();
+//
+//		lp.txtbx_UserName(driver).sendKeys("user@phptravels.com");
+//		// log.info("username :" + username);
+//
+//		// String password =
+//		// ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
+//		lp.txtbx_Password(driver).sendKeys("demouser");
+//
+//		lp.btn_LogIn(driver).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By
+//				.xpath("//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']/ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]/li[@class='open']/a[contains(@href,'javascript:void(0);')]"))
+//				.click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//html//li[@class='open']//li[2]/a[1]")).click();
+//
+//	}
 
 	@BeforeMethod
 	public void AssertResult() {
