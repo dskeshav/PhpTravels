@@ -6,8 +6,11 @@
       <class name="automationFramework.TestCases">
         <methods>
           <include name="AssertResult"/>
+          <include name="InvalidUsername"/>
           <include name="ValidCredential"/>
           <include name="beforeTest"/>
+          <include name="InvalidPassword"/>
+          <include name="InvalidUserPass"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- automationFramework.TestCases -->
