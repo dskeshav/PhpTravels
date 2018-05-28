@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="travelsautomation" duration-ms="61892" started-at="2018-04-23T12:52:40Z" finished-at="2018-04-23T12:53:42Z">
+  <suite name="Default suite" duration-ms="71276" started-at="2018-05-28T13:30:15Z" finished-at="2018-05-28T13:31:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="61892" started-at="2018-04-23T12:52:40Z" finished-at="2018-04-23T12:53:42Z">
+    <test name="Default test" duration-ms="71276" started-at="2018-05-28T13:30:15Z" finished-at="2018-05-28T13:31:26Z">
       <class name="automationFramework.TestCases">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationFramework.TestCases@71423665]" name="beforeTest" is-config="true" duration-ms="5270" started-at="2018-04-23T18:22:35Z" finished-at="2018-04-23T18:22:40Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="beforeTest" is-config="true" duration-ms="9648" started-at="2018-05-28T13:30:05Z" finished-at="2018-05-28T13:30:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="InvalidUsername()[pri:0, instance:automationFramework.TestCases@71423665]" name="InvalidUsername" duration-ms="11713" started-at="2018-04-23T18:22:40Z" finished-at="2018-04-23T18:22:52Z">
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-05-28T13:30:15Z" finished-at="2018-05-28T13:30:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="InvalidUsername()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="InvalidUsername" duration-ms="21971" started-at="2018-05-28T13:30:15Z" finished-at="2018-05-28T13:30:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUsername -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@71423665]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-04-23T18:22:40Z" finished-at="2018-04-23T18:22:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="InvalidPassword()[pri:1, instance:automationFramework.TestCases@71423665]" name="InvalidPassword" duration-ms="13575" started-at="2018-04-23T18:22:52Z" finished-at="2018-04-23T18:23:05Z">
+        <test-method status="PASS" signature="InvalidPassword()[pri:1, instance:automationFramework.TestCases@6c3708b3]" name="InvalidPassword" duration-ms="12935" started-at="2018-05-28T13:30:37Z" finished-at="2018-05-28T13:30:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidPassword -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@71423665]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-04-23T18:22:52Z" finished-at="2018-04-23T18:22:52Z">
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-05-28T13:30:37Z" finished-at="2018-05-28T13:30:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@71423665]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-04-23T18:23:05Z" finished-at="2018-04-23T18:23:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="InvalidUserPass()[pri:2, instance:automationFramework.TestCases@71423665]" name="InvalidUserPass" duration-ms="12227" started-at="2018-04-23T18:23:05Z" finished-at="2018-04-23T18:23:18Z">
+        <test-method status="PASS" signature="InvalidUserPass()[pri:2, instance:automationFramework.TestCases@6c3708b3]" name="InvalidUserPass" duration-ms="8758" started-at="2018-05-28T13:30:50Z" finished-at="2018-05-28T13:30:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUserPass -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@71423665]" name="AssertResult" is-config="true" duration-ms="1" started-at="2018-04-23T18:23:18Z" finished-at="2018-04-23T18:23:18Z">
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-05-28T13:30:50Z" finished-at="2018-05-28T13:30:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="ValidCredential()[pri:3, instance:automationFramework.TestCases@71423665]" name="ValidCredential" duration-ms="24152" started-at="2018-04-23T18:23:18Z" finished-at="2018-04-23T18:23:42Z">
+        <test-method status="PASS" signature="ValidCredential()[pri:3, instance:automationFramework.TestCases@6c3708b3]" name="ValidCredential" duration-ms="21562" started-at="2018-05-28T13:30:59Z" finished-at="2018-05-28T13:31:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidCredential -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:automationFramework.TestCases@71423665]" name="afterClass" is-config="true" duration-ms="206" started-at="2018-04-23T18:23:42Z" finished-at="2018-04-23T18:23:42Z">
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-05-28T13:30:59Z" finished-at="2018-05-28T13:30:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="AssertResult" is-config="true" duration-ms="2" started-at="2018-05-28T13:31:20Z" finished-at="2018-05-28T13:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssertResult -->
+        <test-method status="PASS" signature="logout()[pri:4, instance:automationFramework.TestCases@6c3708b3]" name="logout" duration-ms="4756" started-at="2018-05-28T13:31:20Z" finished-at="2018-05-28T13:31:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:automationFramework.TestCases@6c3708b3]" name="afterClass" is-config="true" duration-ms="1255" started-at="2018-05-28T13:31:25Z" finished-at="2018-05-28T13:31:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- automationFramework.TestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- travelsautomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

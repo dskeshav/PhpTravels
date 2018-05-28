@@ -30,8 +30,9 @@ public class TestCases {
 	public static Logger log = Logger.getLogger(TestCases.class.getName());
 
 	@BeforeSuite
-	public void beforeTest() {
-		System.setProperty("webdriver.gecko.driver", "C:/Users/dkeshav/workspace/selenium/drivers/geckodriver.exe");
+	public void beforeTest() throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver",
+				"E:\\keshav\\PhpTravels\\src\\test\\resource\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		log.info("Current browser is" + driver.getClass());
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -41,6 +42,7 @@ public class TestCases {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Thread.sleep(3000);
 		User_cell_num = ExcelUtils.getCellNum("sheet1", "Username");
 		Password_cell_num = ExcelUtils.getCellNum("sheet1", "Password");
 		MessageDisplay_cell_num = ExcelUtils.getCellNum("sheet1", "Message Displayed");
@@ -174,43 +176,37 @@ public class TestCases {
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
 
-		Assert.assertEquals(result, "Hi, DVhbCERv IlqEZZxz");
+		Assert.assertEquals(result, "Hi, Johny Smith");
 		Thread.sleep(6000);
-//		driver.findElement(By
-//				.xpath("//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']//ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]//li[@class='open']/a[contains(@href,'javascript:void(0);')]"))
-//				.click();
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//html//li[@class='open']//li[2]/a[1]")).click();
-
-
 	}
 
-//	@Test(priority = 4)
-//	public void logout() throws InterruptedException {
+	@Test(priority = 4)
+	public void logout() throws InterruptedException {
 //		driver.get(Constant.URL);
 //		Home_Page hp = new Home_Page();
 //
 //		hp.lnk_MyAccount(driver).click();
+//		Thread.sleep(2000);
 //		hp.lnk_Login(driver).click();
-//
-//		Login_Page lp = new Login_Page();
+//		Thread.sleep(2000);
+		//Login_Page lp = new Login_Page();
 //
 //		lp.txtbx_UserName(driver).sendKeys("user@phptravels.com");
-//		// log.info("username :" + username);
-//
-//		// String password =
-//		// ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-//		lp.txtbx_Password(driver).sendKeys("demouser");
-//
-//		lp.btn_LogIn(driver).click();
-//		Thread.sleep(2000);
-//		driver.findElement(By
-//				.xpath("//div[@class='col-md-6 col-sm-8 col-xs-5 go-left']/ul[contains(@class,'nav navbar-nav navbar-side navbar-right sidebar go-left')]/li[@class='open']/a[contains(@href,'javascript:void(0);')]"))
-//				.click();
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//html//li[@class='open']//li[2]/a[1]")).click();
-//
-//	}
+		// log.info("username :" + username);
+
+		// String password =
+		// ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
+		//lp.txtbx_Password(driver).sendKeys("demouser");
+
+		//lp.btn_LogIn(driver).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(
+				"//*[@id=\"collapse\"]/ul[2]/ul/li[1]/a"))
+				.click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"collapse\"]/ul[2]/ul/li[1]/ul/li[2]/a")).click();
+
+	}
 
 	@BeforeMethod
 	public void AssertResult() {

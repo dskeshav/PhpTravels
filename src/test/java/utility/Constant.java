@@ -8,7 +8,7 @@ public class Constant {
 
 	 public static final String Password = "demouser";
 
-	public static final String Path_TestData = "C:\\Users\\dkeshav\\workspace\\selenium\\PhpTravels\\src\\test\\resource\\TestData\\";
+	public static final String Path_TestData = "E:\\keshav\\PhpTravels\\src\\test\\resource\\TestData\\";
 
 	public static final String File_TestData = "Login.xlsx";
 
