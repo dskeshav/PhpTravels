@@ -171,7 +171,7 @@ public class TestCases {
 		lp.btn_LogIn(driver).click();
 		Thread.sleep(5000);
 
-		result = driver.findElement(By.xpath("//h3[@class='RTL']")).getText();
+		result = driver.findElement(By.xpath("//div[@id=\"body-section\"]//div[@class=\"col-md-2 go-right\"]/h3[@class='RTL']")).getText();
 		System.out.println(result);
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);

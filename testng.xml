@@ -16,6 +16,8 @@
 					<include name="afterClass" />
 				</methods>
 			</class>
+			<class name="automationFramework.HotelBooking">
+			</class>
 		</classes>
 	</test><!-- Test -->
 
