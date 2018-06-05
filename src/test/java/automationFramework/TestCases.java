@@ -24,6 +24,9 @@ public class TestCases {
 	public int MessageDisplay_cell_num;
 	public int Result_cell_num;
 	static String result;
+	
+	Home_Page hp;
+	Login_Page lp;
 
 	int index_var = 0;
 
@@ -53,16 +56,16 @@ public class TestCases {
 	public void InvalidUsername() throws Exception {
 		// Launch website
 		driver.get(Constant.URL);
-		Home_Page hp = new Home_Page();
-		hp.lnk_MyAccount(driver).click();
+	    hp = new Home_Page(driver);
+		hp.lnk_MyAccount.click();
 
-		hp.lnk_Login(driver).click();
+		hp.lnk_Login.click();
 
 		Thread.sleep(4000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
 
 		log.info("username :" + username);
-		Login_Page lp = new Login_Page();
+		lp = new Login_Page(driver);
 		lp.txtbx_UserName(driver).sendKeys(username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
@@ -92,16 +95,16 @@ public class TestCases {
 	@Test(priority = 1)
 	public void InvalidPassword() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page hp = new Home_Page();
+		hp = new Home_Page(driver);
 
-		hp.lnk_MyAccount(driver).click();
+		hp.lnk_MyAccount.click();
 
 		Thread.sleep(2000);
-		hp.lnk_Login(driver).click();
+		hp.lnk_Login.click();
 
 		Thread.sleep(4000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		Login_Page lp = new Login_Page();
+		lp = new Login_Page(driver);
 		lp.txtbx_UserName(driver).sendKeys(username);
 		log.info("username :" + username);
 
@@ -123,13 +126,13 @@ public class TestCases {
 	@Test(priority = 2)
 	public void InvalidUserPass() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page hp = new Home_Page();
+		Home_Page hp = new Home_Page(driver);
 
-		hp.lnk_MyAccount(driver).click();
-		hp.lnk_Login(driver).click();
+		hp.lnk_MyAccount.click();
+		hp.lnk_Login.click();
 
 		Thread.sleep(2000);
-		Login_Page lp = new Login_Page();
+		lp = new Login_Page(driver);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
 		lp.txtbx_UserName(driver).sendKeys(username);
 		log.info("username :" + username);
@@ -151,15 +154,15 @@ public class TestCases {
 	@Test(priority = 3)
 	public void ValidCredential() throws Exception {
 		driver.get(Constant.URL);
-		Home_Page hp = new Home_Page();
-		hp.lnk_MyAccount(driver).click();
+		hp = new Home_Page(driver);
+		hp.lnk_MyAccount.click();
 
 		Thread.sleep(2000);
-		hp.lnk_Login(driver).click();
+		hp.lnk_Login.click();
 
 		Thread.sleep(2000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		Login_Page lp = new Login_Page();
+		lp = new Login_Page(driver);
 		lp.txtbx_UserName(driver).sendKeys(username);
 		log.info("username :" + username);
 

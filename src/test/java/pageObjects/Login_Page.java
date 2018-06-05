@@ -3,9 +3,15 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class Login_Page {
-	// WebElement login_element=null;
+	WebDriver driver;
+	public Login_Page(WebDriver driver) {
+		this.driver = driver;
+        //This initElements method will create all WebElements
+        PageFactory.initElements(driver, this);
+	}
 
 	public WebElement txtbx_UserName(WebDriver driver) {
 		// TODO Auto-generated method stub

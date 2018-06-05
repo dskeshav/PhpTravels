@@ -25,12 +25,12 @@ public class SignIn_Action {
 		System.out.println("username:" + sUserName);
 		System.out.println("pasword:" + sPassword);
 		Thread.sleep(3000);
-		Home_Page hp = new Home_Page();
-		hp.lnk_MyAccount(driver).click();
+		Home_Page hp = new Home_Page(driver);
+		hp.lnk_MyAccount.click();
 
-		hp.lnk_Login(driver).click();
+		hp.lnk_Login.click();
 		
-		Login_Page lp = new Login_Page();
+		Login_Page lp = new Login_Page(driver);
 		lp.txtbx_UserName(driver).sendKeys(sUserName);
 		lp.txtbx_Password(driver).sendKeys(sPassword);
 		
