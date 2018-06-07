@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-travelsautomation">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-travelsautomation" title="automationFramework.TestCases" hash-for-method="ValidCredential">ValidCredential</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-travelsautomation" title="automationFramework.HotelBooking" hash-for-method="searchHotel">searchHotel</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-travelsautomation -->
@@ -114,16 +114,6 @@
                       <a href="#" panel-name="suite-travelsautomation" class="show-methods passed suite-travelsautomation"> (show)</a> <!-- show-methods passed suite-travelsautomation -->
                     </span>
                     <div class="method-list-content passed suite-travelsautomation">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-travelsautomation" title="automationFramework.TestCases" hash-for-method="InvalidPassword">InvalidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-travelsautomation" title="automationFramework.TestCases" hash-for-method="InvalidUserPass">InvalidUserPass</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-travelsautomation" title="automationFramework.TestCases" hash-for-method="InvalidUsername">InvalidUsername</a> <!-- method navigator-link -->
@@ -144,34 +134,17 @@
           <div class="suite-travelsautomation-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">automationFramework.TestCases</span>
+              <span class="class-name">automationFramework.HotelBooking</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ValidCredential">
-                  </a> <!-- ValidCredential -->
-                  <span class="method-name">ValidCredential</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id=&quot;body-section&quot;]//div[@class=&quot;col-md-2 go-right&quot;]/h3[@class=&apos;RTL&apos;]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;ASI-INA122P6QC&apos;, ip: &apos;10.188.27.228&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4032, moz:profile: C:\Users\dkeshav\AppData\Lo..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 19b5fd99-ad20-43d6-bca8-f851cb00d2fc
-*** Element info: {Using=xpath, value=//div[@id=&quot;body-section&quot;]//div[@class=&quot;col-md-2 go-right&quot;]/h3[@class=&apos;RTL&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at automationFramework.TestCases.ValidCredential(TestCases.java:177)
-... Removed 29 stack frames
+                  <a name="searchHotel">
+                  </a> <!-- searchHotel -->
+                  <span class="method-name">searchHotel</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at automationFramework.HotelBooking.searchHotel(HotelBooking.java:27)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -183,20 +156,6 @@ Session ID: 19b5fd99-ad20-43d6-bca8-f851cb00d2fc
               <span class="class-name">automationFramework.TestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidPassword">
-                  </a> <!-- InvalidPassword -->
-                  <span class="method-name">InvalidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidUserPass">
-                  </a> <!-- InvalidUserPass -->
-                  <span class="method-name">InvalidUserPass</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="InvalidUsername">
@@ -230,7 +189,11 @@ Session ID: 19b5fd99-ad20-43d6-bca8-f851cb00d2fc
           &lt;include name=&quot;afterClass&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- automationFramework.TestCases --&gt;
-      &lt;class name=&quot;automationFramework.HotelBooking&quot;/&gt;
+      &lt;class name=&quot;automationFramework.HotelBooking&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;searchHotel&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- automationFramework.HotelBooking --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- travelsautomation --&gt;
@@ -270,28 +233,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidCredential')
+data.setCell(0, 1, 'InvalidUsername')
 data.setCell(0, 2, 'automationFramework.TestCases')
-data.setCell(0, 3, 20718);
+data.setCell(0, 3, 16602);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'InvalidUsername')
-data.setCell(1, 2, 'automationFramework.TestCases')
-data.setCell(1, 3, 13242);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'InvalidPassword')
-data.setCell(2, 2, 'automationFramework.TestCases')
-data.setCell(2, 3, 12197);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'InvalidUserPass')
-data.setCell(3, 2, 'automationFramework.TestCases')
-data.setCell(3, 3, 8902);
+data.setCell(1, 1, 'searchHotel')
+data.setCell(1, 2, 'automationFramework.HotelBooking')
+data.setCell(1, 3, 13266);
 window.suiteTableData['travelsautomation']= { tableData: data, tableDiv: 'times-div-travelsautomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-travelsautomation">
               </div> <!-- times-div-travelsautomation -->
             </div> <!-- times-div -->
@@ -324,49 +279,39 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">automationFramework.HotelBooking</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">automationFramework.TestCases</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">6659 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">AssertResult</span>
-                <span class="method-start">11800 ms</span>
+                <span class="method-start">16433 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">InvalidUsername</span>
-                <span class="method-start">11801 ms</span>
+                <span class="method-start">16433 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">AssertResult</span>
-                <span class="method-start">25057 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">InvalidPassword</span>
-                <span class="method-start">25057 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">AssertResult</span>
-                <span class="method-start">37255 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">InvalidUserPass</span>
-                <span class="method-start">37256 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">AssertResult</span>
-                <span class="method-start">46159 ms</span>
-              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">automationFramework.HotelBooking</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">ValidCredential</span>
-                <span class="method-start">46159 ms</span>
+                <span class="method-name">searchHotel</span>
+                <span class="method-start">33053 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">66911 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">46445 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

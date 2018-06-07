@@ -12,6 +12,7 @@ public class Home_Page {
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
 	}
+
 	
 	
 	WebDriver driver;
@@ -24,26 +25,26 @@ public class Home_Page {
 	public WebElement lnk_Login;		
 	
 	@FindBy(xpath="//div[@id='select2-drop']//div[@class='select2-search']//input[@type='text']")
-	WebElement hotel_city;
+	public WebElement hotel_city;
 	
 	@FindBy(xpath="//div[@id='dpd1']//div[@class='row']//input[@type='text']")
-	WebElement check_In_Date;
+	public WebElement check_In_Date;
 	
 	
 	@FindBy(xpath="//div[@id='dpd2']//div[@class='row']//input[@type='text']")
-	WebElement check_Out_Date;
+	public WebElement check_Out_Date;
 		
 	@FindBy(xpath="//div[@id='dpd2']//div[@class='row']//input[@type='text']")
-	WebElement travellers_Input;
+	public WebElement travellers_Input;
 		
 	@FindBy(xpath="//input[@id='adultInput']")
-	WebElement tra_In_Adult_In;
+	public WebElement tra_In_Adult_In;
 	
 	@FindBy(xpath="//input[@id='childInput']")
-	WebElement tra_In_Child_In;
+	public WebElement tra_In_Child_In;
 		
 	@FindBy(xpath="//form[@name='fCustomHotelSearch']//div[@class='col-md-2 form-group go-right col-xs-12 search-button']//button[@type='submit']")
-	WebElement search; 
+	public WebElement search; 
 	
 	
 

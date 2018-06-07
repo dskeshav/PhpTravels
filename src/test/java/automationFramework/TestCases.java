@@ -34,6 +34,7 @@ public class TestCases {
 
 	@BeforeSuite
 	public void beforeTest() throws InterruptedException {
+		System.out.println("Testcases setup");
 		System.setProperty("webdriver.gecko.driver",
 				"E:\\keshav\\PhpTravels\\src\\test\\resource\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
@@ -66,15 +67,15 @@ public class TestCases {
 
 		log.info("username :" + username);
 		lp = new Login_Page(driver);
-		lp.txtbx_UserName(driver).sendKeys(username);
+		lp.txtbx_UserName.sendKeys(username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
 		log.info("password :" + password);
-		lp.txtbx_Password(driver).sendKeys(password);
+		lp.txtbx_Password.sendKeys(password);
 
 		// Thread.sleep(2000);
 
-		lp.btn_LogIn(driver).click();
+		lp.btn_LogIn.click();
 
 		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
 
@@ -105,13 +106,13 @@ public class TestCases {
 		Thread.sleep(4000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
 		lp = new Login_Page(driver);
-		lp.txtbx_UserName(driver).sendKeys(username);
+		lp.txtbx_UserName.sendKeys(username);
 		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		lp.txtbx_Password(driver).sendKeys(password);
+		lp.txtbx_Password.sendKeys(password);
 
-		lp.btn_LogIn(driver).click();
+		lp.btn_LogIn.click();
 		Thread.sleep(2000);
 
 		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
@@ -134,13 +135,13 @@ public class TestCases {
 		Thread.sleep(2000);
 		lp = new Login_Page(driver);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
-		lp.txtbx_UserName(driver).sendKeys(username);
+		lp.txtbx_UserName.sendKeys(username);
 		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		lp.txtbx_Password(driver).sendKeys(password);
+		lp.txtbx_Password.sendKeys(password);
 
-		lp.btn_LogIn(driver).click();
+		lp.btn_LogIn.click();
 		Thread.sleep(2000);
 
 		result = driver.findElement(By.xpath("//div[@class='resultlogin']/div[@class='alert alert-danger']")).getText();
@@ -163,18 +164,18 @@ public class TestCases {
 		Thread.sleep(2000);
 		String username = ExcelUtils.Row.getCell(User_cell_num).getStringCellValue();
 		lp = new Login_Page(driver);
-		lp.txtbx_UserName(driver).sendKeys(username);
+		lp.txtbx_UserName.sendKeys(username);
 		log.info("username :" + username);
 
 		String password = ExcelUtils.Row.getCell(Password_cell_num).getStringCellValue();
-		lp.txtbx_Password(driver).sendKeys(password);
+		lp.txtbx_Password.sendKeys(password);
 
 		Thread.sleep(2000);
 
-		lp.btn_LogIn(driver).click();
+		lp.btn_LogIn.click();
 		Thread.sleep(5000);
 
-		result = driver.findElement(By.xpath("//div[@id=\"body-section\"]//div[@class=\"col-md-2 go-right\"]/h3[@class='RTL']")).getText();
+		result = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div[1]/div/div[1]/h3")).getText();
 		System.out.println(result);
 
 		ExcelUtils.setCellData(result, index_var, MessageDisplay_cell_num);
@@ -222,6 +223,7 @@ public class TestCases {
 
 	@AfterClass
 	public void afterClass() {
+		System.out.println("Testcases setup");
 		driver.quit();
 	}
 }

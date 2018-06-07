@@ -31,10 +31,10 @@ public class SignIn_Action {
 		hp.lnk_Login.click();
 		
 		Login_Page lp = new Login_Page(driver);
-		lp.txtbx_UserName(driver).sendKeys(sUserName);
-		lp.txtbx_Password(driver).sendKeys(sPassword);
+		lp.txtbx_UserName.sendKeys(sUserName);
+		lp.txtbx_Password.sendKeys(sPassword);
 		
-		lp.btn_LogIn(driver).click();
+		lp.btn_LogIn.click();
 		Thread.sleep(6000);
 	}
 

@@ -17,6 +17,9 @@
 				</methods>
 			</class>
 			<class name="automationFramework.HotelBooking">
+			<methods>
+			<include name="searchHotel" />
+			</methods>
 			</class>
 		</classes>
 	</test><!-- Test -->

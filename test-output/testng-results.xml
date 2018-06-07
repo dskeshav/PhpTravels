@@ -1,76 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="5" passed="3">
+<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="travelsautomation" duration-ms="57140" started-at="2018-06-05T13:57:32Z" finished-at="2018-06-05T13:58:29Z">
+  <suite name="travelsautomation" duration-ms="29913" started-at="2018-06-07T13:38:28Z" finished-at="2018-06-07T13:38:57Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="57140" started-at="2018-06-05T13:57:32Z" finished-at="2018-06-05T13:58:29Z">
+    <test name="Test" duration-ms="29913" started-at="2018-06-07T13:38:28Z" finished-at="2018-06-07T13:38:57Z">
       <class name="automationFramework.TestCases">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationFramework.TestCases@210366b4]" name="beforeTest" is-config="true" duration-ms="11782" started-at="2018-06-05T13:57:20Z" finished-at="2018-06-05T13:57:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@210366b4]" name="AssertResult" is-config="true" duration-ms="1" started-at="2018-06-05T13:57:32Z" finished-at="2018-06-05T13:57:32Z">
+        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@eec5a4a]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-06-07T13:38:28Z" finished-at="2018-06-07T13:38:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="InvalidUsername()[pri:0, instance:automationFramework.TestCases@210366b4]" name="InvalidUsername" duration-ms="13242" started-at="2018-06-05T13:57:32Z" finished-at="2018-06-05T13:57:45Z">
+        <test-method status="PASS" signature="InvalidUsername()[pri:0, instance:automationFramework.TestCases@eec5a4a]" name="InvalidUsername" duration-ms="16602" started-at="2018-06-07T13:38:28Z" finished-at="2018-06-07T13:38:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidUsername -->
-        <test-method status="PASS" signature="InvalidPassword()[pri:1, instance:automationFramework.TestCases@210366b4]" name="InvalidPassword" duration-ms="12197" started-at="2018-06-05T13:57:45Z" finished-at="2018-06-05T13:57:58Z">
+      </class> <!-- automationFramework.TestCases -->
+      <class name="automationFramework.HotelBooking">
+        <test-method status="PASS" signature="setup()[pri:0, instance:automationFramework.HotelBooking@2b2948e2]" name="setup" is-config="true" duration-ms="6659" started-at="2018-06-07T13:38:11Z" finished-at="2018-06-07T13:38:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidPassword -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@210366b4]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-06-05T13:57:45Z" finished-at="2018-06-05T13:57:45Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:automationFramework.TestCases@eec5a4a]" name="beforeTest" is-config="true" duration-ms="9753" started-at="2018-06-07T13:38:18Z" finished-at="2018-06-07T13:38:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@210366b4]" name="AssertResult" is-config="true" duration-ms="1" started-at="2018-06-05T13:57:58Z" finished-at="2018-06-05T13:57:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="InvalidUserPass()[pri:2, instance:automationFramework.TestCases@210366b4]" name="InvalidUserPass" duration-ms="8902" started-at="2018-06-05T13:57:58Z" finished-at="2018-06-05T13:58:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidUserPass -->
-        <test-method status="FAIL" signature="ValidCredential()[pri:3, instance:automationFramework.TestCases@210366b4]" name="ValidCredential" duration-ms="20718" started-at="2018-06-05T13:58:06Z" finished-at="2018-06-05T13:58:27Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //div[@id="body-section"]//div[@class="col-md-2 go-right"]/h3[@class='RTL']
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'ASI-INA122P6QC', ip: '10.188.27.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4032, moz:profile: C:\Users\dkeshav\AppData\Lo..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 19b5fd99-ad20-43d6-bca8-f851cb00d2fc
-*** Element info: {Using=xpath, value=//div[@id="body-section"]//div[@class="col-md-2 go-right"]/h3[@class='RTL']}]]>
-            </message>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="searchHotel()[pri:0, instance:automationFramework.HotelBooking@2b2948e2]" name="searchHotel" duration-ms="13266" started-at="2018-06-07T13:38:44Z" finished-at="2018-06-07T13:38:57Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id="body-section"]//div[@class="col-md-2 go-right"]/h3[@class='RTL']
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'ASI-INA122P6QC', ip: '10.188.27.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4032, moz:profile: C:\Users\dkeshav\AppData\Lo..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 19b5fd99-ad20-43d6-bca8-f851cb00d2fc
-*** Element info: {Using=xpath, value=//div[@id="body-section"]//div[@class="col-md-2 go-right"]/h3[@class='RTL']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-at automationFramework.TestCases.ValidCredential(TestCases.java:177)
+              <![CDATA[java.lang.NullPointerException
+at automationFramework.HotelBooking.searchHotel(HotelBooking.java:27)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,19 +57,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidCredential -->
-        <test-method status="PASS" signature="AssertResult()[pri:0, instance:automationFramework.TestCases@210366b4]" name="AssertResult" is-config="true" duration-ms="0" started-at="2018-06-05T13:58:06Z" finished-at="2018-06-05T13:58:06Z">
+        </test-method> <!-- searchHotel -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:automationFramework.HotelBooking@2b2948e2]" name="teardown" is-config="true" duration-ms="1490" started-at="2018-06-07T13:38:58Z" finished-at="2018-06-07T13:38:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AssertResult -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:automationFramework.TestCases@210366b4]" name="afterClass" is-config="true" duration-ms="2011" started-at="2018-06-05T13:58:27Z" finished-at="2018-06-05T13:58:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- automationFramework.TestCases -->
+        </test-method> <!-- teardown -->
+      </class> <!-- automationFramework.HotelBooking -->
     </test> <!-- Test -->
   </suite> <!-- travelsautomation -->
 </testng-results>

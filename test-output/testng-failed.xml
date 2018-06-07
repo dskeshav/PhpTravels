@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [travelsautomation]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="automationFramework.TestCases">
+      <class name="automationFramework.HotelBooking">
         <methods>
-          <include name="AssertResult"/>
-          <include name="ValidCredential"/>
-          <include name="beforeTest"/>
-          <include name="afterClass"/>
+          <include name="teardown"/>
+          <include name="searchHotel"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- automationFramework.TestCases -->
+      </class> <!-- automationFramework.HotelBooking -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [travelsautomation] -->

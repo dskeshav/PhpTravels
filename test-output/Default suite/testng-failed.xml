@@ -8,7 +8,6 @@
           <include name="AssertResult"/>
           <include name="ValidCredential"/>
           <include name="beforeTest"/>
-          <include name="InvalidUserPass"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- automationFramework.TestCases -->
